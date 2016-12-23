@@ -1,0 +1,51 @@
+% This is main.tex
+
+% Rays paper template.
+
+% DO NOT MODIFY this file.
+
+\documentclass[12pt,titlepage]{article}
+
+\input{preamble}
+
+% \doublespacing
+
+\begin{document}
+
+\include{cover}
+
+\maketitle
+
+\renewenvironment{abstract}{
+  \vspace*{\fill}
+  \begin{center}%
+    \bfseries\abstractname
+  \end{center}}%
+  {\vfill}
+  
+
+\selectlanguage{english} 
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+\begin{otherlanguage}{swedish}
+\begin{abstract}
+\input{sammanfattning}
+\end{abstract}
+\end{otherlanguage}
+
+\newpage
+
+\tableofcontents
+\thispagestyle{empty}
+\setcounter{page}{0}
+
+
+\include{paper}
+%\addcontentsline{toc}{section}{References}
+\medskip
+\printbibliography
+
+\include{appendix}
+
+\end{document}
